@@ -1,38 +1,38 @@
-let cards = [// let projects [] with nameProjects, in the next release
+let frames = [// let projects [] with nameProjects, in the next release
     {
         'id' : 0,
-        'nameCard' : 'Back-log',
-        'colorCard' : '#ff0000',
+        'nameFrame' : 'Back-log',
+        // 'colorFrame' : '#ff0000',
         'listTasks' : []
     },
     {
         'id' : 1,
-        'nameCard' : 'Doing',
-        'colorCard' : '#0000ff',
+        'nameFrame' : 'Doing',
+        // 'colorFrame' : '#0000ff',
         'listTasks' : []
     },
     {
         'id' : 2,
-        'nameCard' : 'Done',
-        'colorCard' : '#00ff00',
+        'nameFrame' : 'Done',
+        // 'colorFrame' : '#00ff00',
         'listTasks' : []
     },
 ]
 // selecionar lista
-let ulCards = $('#list-cards');
-ulCards.addClass("white");
+let ulFrames = $('#list-frames');
+ulFrames.addClass("white");
 
-function builderCard(name, color = '000'){
+function builderFrame(name, color = '#000'){
     // let cardContainer = 
-    let card = $('<li>'),
-    nameCard = $('<p>').text(name).addClass('card-panel white-text center');
-    nameCard.css("background-color", color);
-    card.append(nameCard);
-    card.attr("class", 'col s4 m4 l4');
-    return card;
+    let frame = $('<li>'),
+    nameframe = $('<p>').text(name).addClass('card-panel white-text center');
+    nameframe.css("background-color", color);
+    frame.append(nameframe);
+    frame.attr("class", 'col s4 m4 l4');
+    return frame;
 }
 
-cards.forEach(element => {
-    let newCard = builderCard(element.nameCard, element.colorCard);
-    ulCards.append(newCard);
+frames.forEach(element => {
+    let newFrame = builderFrame(element.nameFrame, element.colorFrame);
+    ulFrames.append(newFrame);
 });
