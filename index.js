@@ -2,7 +2,7 @@ let frames = [// let projects [] with nameProjects, in the next release
     {
         'id' : 0,
         'nameFrame' : 'Back-log',
-        // 'colorFrame' : '#ff0000',
+        'colorFrame' : '#ff0000',
         'listTasks' : []
     },
     {
@@ -25,9 +25,11 @@ ulFrames.addClass("white");
 function builderFrame(name, color = '#000'){
     // let cardContainer = 
     let frame = $('<li>'),
+    divAdd = $('<div>').addClass('add_circle right'),
     nameframe = $('<p>').text(name).addClass('card-panel white-text center');
     nameframe.css("background-color", color);
     frame.append(nameframe);
+    frame.append(divAdd);
     frame.attr("class", 'col s4 m4 l4');
     return frame;
 }
